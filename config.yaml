@@ -1,0 +1,12 @@
+order:  
+  redis:
+    url: "localhost:6379"
+    pass: ""
+  gin:
+    mode: "debug"
+    url: ":8085"
+rabbitmq:
+  connection_string: "amqp://guest:guest@192.168.101.204:5672/"
+grpc:
+  connection_string: ":8081"
+  user_grpc_connection_string: ":8081"

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pricegrpc;
+
+option go_package = ".;pricegrpc";
+ 
+
+service Price {
+	rpc GetCurrentPrice(pricegrpc.GetCurrentPriceReq) returns(pricegrpc.GetCurrentPriceRes){}
+}
+
+message GetCurrentPriceReq {
+	string Pair = 1 ; 
+}
+
+message GetCurrentPriceRes {
+	int64 Price = 1 ;
+}

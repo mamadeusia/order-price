@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/mohammad/Documents/preHiring'
+ 
+echo "  >  Building price binary..."
+GOBIN=/home/mohammad/Documents/preHiring/bin go build -o /home/mohammad/Documents/preHiring/bin/price ./cmd/price
+echo "  >  Building order binary..."
+GOBIN=/home/mohammad/Documents/preHiring/bin go build -o /home/mohammad/Documents/preHiring/bin/order ./cmd/order
+mkdir -p server/grpc/pricegrpc
+protoc -I=server/grpc/pb \
+--go_out=server/grpc/pricegrpc \
+--go-grpc_out=server/grpc/pricegrpc \
+server/grpc/pb/price.proto
+make: Leaving directory '/home/mohammad/Documents/preHiring'
+ 

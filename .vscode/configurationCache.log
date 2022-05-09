@@ -1,0 +1,1 @@
+{"buildTargets":["all","go-build-order","go-build-price","proto"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
